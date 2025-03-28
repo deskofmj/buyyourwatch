@@ -48,3 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.querySelector(".another_next");
   nextBtn.addEventListener("click", () => embla.scrollNext());
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".read-more-toggle");
+  const paragraph = document.querySelector(".description-paragraph");
+
+  toggle.addEventListener("click", () => {
+    paragraph.classList.toggle("expanded");
+    toggle.textContent = paragraph.classList.contains("expanded") ? "Read less" : "Read more";
+  });
+});
